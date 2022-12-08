@@ -4,8 +4,8 @@ from django.shortcuts import render
 from django.shortcuts import redirect, render
 from .models import Portafolio
 from django.views.generic import TemplateView, FormView, View
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin   # para clases
+from django.contrib.auth.decorators import login_required   #para metodos, utilizar decorador
 from .forms import PortafolioForm
 from django.utils import timezone
 import urllib.request

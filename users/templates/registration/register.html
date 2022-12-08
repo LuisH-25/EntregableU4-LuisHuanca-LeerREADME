@@ -5,7 +5,8 @@
     <div class="card-body">
       <h2>Register</h2>
       <form method="post" novalidate>
-        {% csrf_token %} {{ form.as_p }}
+        {% csrf_token %} 
+        {{ form.as_p }}
           <div class="d-grid">
             <button type="submit" class="btn btn-primary">Crear Usuario</button>
           </div>

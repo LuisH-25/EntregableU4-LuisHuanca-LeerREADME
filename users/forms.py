@@ -15,7 +15,7 @@ class NewUserForm(UserCreationForm):
     """ Vamos a sobreescribir el metodo save """
     def save(self, commit=True):
         user = super(NewUserForm, self).save(commit=False)
-        # aumentar el email
+        # aumentar el email y foto
         user.email = self.cleaned_data['email']
         user.foto = self.cleaned_data['foto']
         if commit:
