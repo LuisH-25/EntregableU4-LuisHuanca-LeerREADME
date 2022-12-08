@@ -1,0 +1,36 @@
+{% extends "../base.html" %} {% block content %}
+
+<div class="row mt-5">
+  <div class="col-md-6">
+    <h2 class="mt-3">Lista de Portafolios {{hora_actual}}</h2>
+  </div>
+  <div class="col-md-6" style="text-align: right">
+    <a href="{% url 'create' %}" class="btn btn-primary mt-3">Crear Portafolio</a>
+  </div>
+</div>
+
+<table class="table table-bordered table-hove mt-5">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Tags</th>
+      <th>Url</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for portafolio in Portafolios %}
+    <tr>
+      <td>{{ portafolio.titulo }}</td>
+      <td>{{ portafolio.descripcion }}</td>
+      <td>{{ portafolio.tag }}</td>
+      <td>{{ portafolio.url }}</td>
+      <td>
+        <a href="/delete/{{ portafolio.id }}" class="btn btn-danger">Eliminar</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
