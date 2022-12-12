@@ -5,7 +5,7 @@
     <h2 class="mt-3">Lista de Portafolios {{hora_actual}}</h2>
   </div>
   <div class="col-md-6" style="text-align: right">
-    <a href="/create/{{request.user.id}}" class="btn btn-primary mt-3">Crear Portafolio</a>
+    <a href="{% url 'create' %}" class="btn btn-primary mt-3">Crear Portafolio</a>
   </div>
 </div>
 
