@@ -49,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     #'users.middleware.is_valid_ip',
+     #'users.middleware.IPIsValid',
 ]
 
 ROOT_URLCONF = 'misitio.urls'
